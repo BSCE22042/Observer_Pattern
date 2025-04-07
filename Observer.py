@@ -37,6 +37,12 @@ class AnalyticsDashboard(Observer):
     def update(self, student_name, grade):
         print(f"[Analytics Dashboard] Logging: {student_name} got {grade}.")
 
+# Concrete Observer: Teacher Portal
+# roll number 9,42,45
+class TeacherPortal(Observer):
+    def update(self, student_name, grade):
+        print(f"[Teacher Portal] Grade update: {student_name} has scored {grade}.")
+
 # Usage
 if __name__ == "__main__":
     gradebook = GradeBook()
@@ -44,10 +50,12 @@ if __name__ == "__main__":
     parent = ParentPortal()
     student = StudentPortal()
     dashboard = AnalyticsDashboard()
+    teacher = TeacherPortal()  # New observer
 
     gradebook.add_observer(parent)
     gradebook.add_observer(student)
     gradebook.add_observer(dashboard)
+    gradebook.add_observer(teacher)  # Add new observer to GradeBook
 
     gradebook.enter_grade("Alice", 92)
     gradebook.enter_grade("Bob", 85)
