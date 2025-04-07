@@ -1,0 +1,222 @@
+<mxfile host="app.diagrams.net" modified="2023-04-08T03:45:12.345Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36" etag="ghi789" version="14.5.1" type="device">
+  <diagram id="C5RBs43oDa-KdzZeNtuy" name="Coffee Decorator Pattern">
+    <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+      <root>
+        <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
+        <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
+        
+        <!-- Title -->
+        <mxCell id="title" value="Coffee Decorator Pattern" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;fontStyle=1" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="350" y="20" width="400" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- Client -->
+        <mxCell id="client-1" value="&lt;&lt;client&gt;&gt;&#xa;main" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="50" y="80" width="210" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="client-ops" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="client-1">
+          <mxGeometry y="40" width="210" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="client-ops-1" value="1. Create simple coffee&#xa;2. Create coffee with one decorator&#xa;3. Create coffee with multiple decorators&#xa;4. Create base coffee with decorators" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="client-1">
+          <mxGeometry y="48" width="210" height="132" as="geometry" />
+        </mxCell>
+        
+        <!-- Component -->
+        <mxCell id="component-1" value="Coffee" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="440" y="80" width="220" height="86" as="geometry" />
+        </mxCell>
+        <mxCell id="component-ops" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="component-1">
+          <mxGeometry y="26" width="220" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="component-ops-1" value="+ get_description(): string&#xa;+ get_cost(): float" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="component-1">
+          <mxGeometry y="34" width="220" height="52" as="geometry" />
+        </mxCell>
+        
+        <!-- Concrete Component -->
+        <mxCell id="concrete-component-1" value="Espresso" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="280" y="240" width="220" height="86" as="geometry" />
+        </mxCell>
+        <mxCell id="concrete-component-ops" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="concrete-component-1">
+          <mxGeometry y="26" width="220" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="concrete-component-ops-1" value="+ get_description(): string // returns &quot;Espresso&quot;&#xa;+ get_cost(): float // returns 8.0" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="concrete-component-1">
+          <mxGeometry y="34" width="220" height="52" as="geometry" />
+        </mxCell>
+        
+        <!-- Decorator Base Class -->
+        <mxCell id="decorator-1" value="CoffeeDecorator" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="600" y="240" width="220" height="112" as="geometry" />
+        </mxCell>
+        <mxCell id="decorator-attrs" value="- coffee: Coffee" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="decorator-1">
+          <mxGeometry y="26" width="220" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="decorator-ops" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="decorator-1">
+          <mxGeometry y="52" width="220" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="decorator-ops-1" value="+ __init__(coffee: Coffee)&#xa;+ get_description(): string // delegates&#xa;+ get_cost(): float // delegates" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="decorator-1">
+          <mxGeometry y="60" width="220" height="52" as="geometry" />
+        </mxCell>
+        
+        <!-- Milk Decorator -->
+        <mxCell id="milk-decorator" value="MilkDecorator" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="320" y="420" width="220" height="86" as="geometry" />
+        </mxCell>
+        <mxCell id="milk-decorator-ops" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="milk-decorator">
+          <mxGeometry y="26" width="220" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="milk-decorator-ops-1" value="+ get_description(): string // adds &quot;, with Milk&quot;&#xa;+ get_cost(): float // adds 1.5" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="milk-decorator">
+          <mxGeometry y="34" width="220" height="52" as="geometry" />
+        </mxCell>
+        
+        <!-- Caramel Decorator -->
+        <mxCell id="caramel-decorator" value="CaramelDecorator" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="600" y="420" width="220" height="86" as="geometry" />
+        </mxCell>
+        <mxCell id="caramel-decorator-ops" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="caramel-decorator">
+          <mxGeometry y="26" width="220" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="caramel-decorator-ops-1" value="+ get_description(): string // adds &quot;, with Caramel&quot;&#xa;+ get_cost(): float // adds 2.0" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="caramel-decorator">
+          <mxGeometry y="34" width="220" height="52" as="geometry" />
+        </mxCell>
+        
+        <!-- Whipped Cream Decorator -->
+        <mxCell id="whipped-cream-decorator" value="WhippedCreamDecorator" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="880" y="420" width="220" height="86" as="geometry" />
+        </mxCell>
+        <mxCell id="whipped-cream-decorator-ops" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="whipped-cream-decorator">
+          <mxGeometry y="26" width="220" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="whipped-cream-decorator-ops-1" value="+ get_description(): string // adds &quot;, with Whipped Cream&quot;&#xa;+ get_cost(): float // adds 1.0" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="whipped-cream-decorator">
+          <mxGeometry y="34" width="220" height="52" as="geometry" />
+        </mxCell>
+        
+        <!-- Inheritance Relationships -->
+        <mxCell id="inheritance-1" value="" style="endArrow=block;endSize=16;endFill=0;html=1;entryX=0.25;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="concrete-component-1" target="component-1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="390" y="230" as="sourcePoint" />
+            <mxPoint x="495" y="180" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="390" y="200" />
+              <mxPoint x="495" y="200" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="inheritance-2" value="" style="endArrow=block;endSize=16;endFill=0;html=1;entryX=0.75;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="decorator-1" target="component-1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="710" y="230" as="sourcePoint" />
+            <mxPoint x="605" y="180" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="710" y="200" />
+              <mxPoint x="605" y="200" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Concrete Decorator Inheritance -->
+        <mxCell id="inheritance-3" value="" style="endArrow=block;endSize=16;endFill=0;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="milk-decorator" target="decorator-1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="430" y="410" as="sourcePoint" />
+            <mxPoint x="655" y="360" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="430" y="380" />
+              <mxPoint x="655" y="380" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="inheritance-4" value="" style="endArrow=block;endSize=16;endFill=0;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="caramel-decorator" target="decorator-1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="710" y="410" as="sourcePoint" />
+            <mxPoint x="710" y="360" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="710" y="380" />
+              <mxPoint x="710" y="380" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="inheritance-5" value="" style="endArrow=block;endSize=16;endFill=0;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="whipped-cream-decorator" target="decorator-1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="990" y="410" as="sourcePoint" />
+            <mxPoint x="765" y="360" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="990" y="380" />
+              <mxPoint x="765" y="380" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Composition Relationship -->
+        <mxCell id="composition-1" value="" style="endArrow=diamondThin;endFill=1;endSize=24;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" target="decorator-attrs">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="550" y="170" as="sourcePoint" />
+            <mxPoint x="600" y="280" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="550" y="280" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Client to Component relationships -->
+        <mxCell id="client-to-component" value="creates &gt;" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="client-ops-1" target="component-ops-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="270" y="150" as="sourcePoint" />
+            <mxPoint x="430" y="130" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Example Usage Section -->
+        <mxCell id="example-title" value="Example Usages" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;fontStyle=1" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="440" y="530" width="220" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- Example 1 -->
+        <mxCell id="example-1" value="Simple Espresso" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="50" y="570" width="220" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="example-1-code" value="my_coffee = Espresso()&#xa;print(f&quot;{my_coffee.get_description()}: &#xa;        ${my_coffee.get_cost()}&quot;)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="example-1">
+          <mxGeometry y="26" width="220" height="52" as="geometry" />
+        </mxCell>
+        
+        <!-- Example 2 -->
+        <mxCell id="example-2" value="Espresso with Milk" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="320" y="570" width="220" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="example-2-code" value="my_coffee = MilkDecorator(Espresso())&#xa;print(f&quot;{my_coffee.get_description()}: &#xa;        ${my_coffee.get_cost()}&quot;)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="example-2">
+          <mxGeometry y="26" width="220" height="52" as="geometry" />
+        </mxCell>
+        
+        <!-- Example 3 -->
+        <mxCell id="example-3" value="Complex Coffee with Multiple Decorators" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="600" y="570" width="280" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="example-3-code" value="my_coffee = WhippedCreamDecorator(&#xa;              CaramelDecorator(&#xa;                MilkDecorator(Espresso())))&#xa;print(f&quot;{my_coffee.get_description()}: ${my_coffee.get_cost()}&quot;)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="example-3">
+          <mxGeometry y="26" width="280" height="74" as="geometry" />
+        </mxCell>
+        
+        <!-- Example 4 -->
+        <mxCell id="example-4" value="Basic Coffee with Decorators" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="320" y="690" width="220" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="example-4-code" value="basic_with_extras = CaramelDecorator(&#xa;                       WhippedCreamDecorator(&#xa;                         Coffee()))&#xa;print(f&quot;{basic_with_extras.get_description()}: ${basic_with_extras.get_cost()}&quot;)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="example-4">
+          <mxGeometry y="26" width="220" height="64" as="geometry" />
+        </mxCell>
+        
+        <!-- Pattern Description -->
+        <mxCell id="pattern-desc" value="Decorator Pattern: Allows behaviors to be added to individual objects, dynamically, without affecting the behavior of other objects from the same class." style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;fontColor=#000000;darkOpacity=0.05;fillColor=#FFF9B2;strokeColor=#d6b656;fillStyle=solid;direction=west;gradientDirection=north;gradientColor=#FFF2A1;shadow=1;size=20;pointerEvents=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="880" y="80" width="220" height="100" as="geometry" />
+        </mxCell>
+        
+        <!-- Output -->
+        <mxCell id="output-title" value="Example Output" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="880" y="200" width="220" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="output" value="Espresso: $8.0&#xa;&#xa;Espresso, with Milk: $9.5&#xa;&#xa;Espresso, with Milk, with Caramel, with Whipped Cream: $12.5&#xa;&#xa;Basic Coffee, with Whipped Cream, with Caramel: $8.0" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;align=left;spacingLeft=10;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="880" y="230" width="220" height="150" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile> 
