@@ -55,6 +55,7 @@ if __name__ == "__main__":
     gradebook.add_observer(parent)
     gradebook.add_observer(student)
     gradebook.add_observer(dashboard)
+    
     gradebook.add_observer(teacher)  # Add new observer to GradeBook
 
     gradebook.enter_grade("Alice", 92)
